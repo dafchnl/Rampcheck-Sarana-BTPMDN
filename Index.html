@@ -599,6 +599,162 @@ waktu();
 
 
 
+let currentStep=0;
+
+let tabs=document.querySelectorAll('.tab');
+
+
+
+function showStep(i){
+
+tabs.forEach(x=>x.classList.remove('active'));
+
+tabs[i].classList.add('active');
+
+}
+
+
+
+function nextStep(){
+
+
+if(currentStep<3){
+
+currentStep++;
+
+showStep(currentStep);
+
+}
+
+
+}
+
+
+
+
+function prevStep(){
+
+
+if(currentStep>0){
+
+currentStep--;
+
+showStep(currentStep);
+
+}
+
+
+}
+
+
+
+showStep(0);
+
+
+
+
+
+function autoRC(){
+
+
+
+
+let no=localStorage.getItem("rc");
+
+
+
+if(!no) no=1;
+
+
+
+let tahun=new Date().getFullYear();
+
+
+
+document.getElementById("noRC").value=
+
+
+"RC-BTPMDN-"+tahun+"-"+
+
+
+String(no).padStart(4,'0');
+
+
+
+}
+
+
+
+autoRC();
+
+
+
+
+
+
+foto.onchange=function(){
+
+
+let file=this.files[0];
+
+
+
+let reader=new FileReader();
+
+
+
+reader.onload=function(e){
+
+
+
+preview.src=e.target.result;
+
+
+preview.style.display='block';
+
+
+
+}
+
+
+
+reader.readAsDataURL(file);
+
+
+}
+
+
+
+
+
+
+
+function saveData(){
+
+
+
+
+let no=parseInt(localStorage.getItem("rc")||1);
+
+
+
+localStorage.setItem("rc",no+1);
+
+
+
+alert("Berhasil disimpan");
+
+
+
+autoRC();
+
+
+
+
+}
+
+
+
 </body>
 
 

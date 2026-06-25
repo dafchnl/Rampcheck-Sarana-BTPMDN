@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>SIRAKA-BTP</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="assets/logo_btp.png">
+
+<h3>SIRAKA-BTP</h3>
+
+<p>BTP Medan</p>
+
+</div>
+
+
+
+<ul>
+
+
+<li class="active">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</li>
+
+
+
+<li>
+
+<i class="fa fa-plus"></i>
+
+Input Rampcheck
+
+</li>
+
+
+
+<li>
+
+<i class="fa fa-train"></i>
+
+Data Sarana
+
+</li>
+
+
+
+<li>
+
+<i class="fa fa-clipboard"></i>
+
+Temuan
+
+</li>
+
+
+
+<li>
+
+<i class="fa fa-chart-line"></i>
+
+Monitoring
+
+</li>
+
+
+
+<li>
+
+<i class="fa fa-file-excel"></i>
+
+Export
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<div class="main">
+
+
+
+<header>
+
+<div>
+
+
+<h2>
+
+Dashboard SIRAKA-BTP
+
+</h2>
+
+
+<p>
+
+Balai Teknik Perkeretaapian Medan
+
+</p>
+
+</div>
+
+
+
+<div class="right">
+
+<div id="jam"></div>
+
+</div>
+
+
+</header>
+
+
+
+
+<section class="cards">
+
+
+
+<div class="card blue">
+
+<h4>Total</h4>
+
+<h2>145</h2>
+
+</div>
+
+
+
+<div class="card red">
+
+<h4>Kritis</h4>
+
+<h2>12</h2>
+
+</div>
+
+
+
+<div class="card yellow">
+
+<h4>Mayor</h4>
+
+<h2>28</h2>
+
+</div>
+
+
+
+<div class="card green">
+
+<h4>Minor</h4>
+
+<h2>65</h2>
+
+</div>
+
+
+
+<div class="card cyan">
+
+<h4>Observasi</h4>
+
+<h2>40</h2>
+
+</div>
+
+
+
+<div class="card orange">
+
+<h4>Open</h4>
+
+<h2>35</h2>
+
+</div>
+
+
+
+<div class="card navy">
+
+<h4>Progress</h4>
+
+<h2>70</h2>
+
+</div>
+
+
+
+<div class="card success">
+
+<h4>Closed</h4>
+
+<h2>40</h2>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="dashboard">
+
+
+
+<div class="box">
+
+
+<h3>
+
+Progress Penyelesaian
+
+</h3>
+
+
+
+<div class="progress">
+
+<div class="bar"></div>
+
+</div>
+
+
+<p>72%</p>
+
+
+</div>
+
+
+
+
+<div class="box">
+
+
+<h3>
+
+Grafik Prioritas
+
+</h3>
+
+
+<canvas></canvas>
+
+</div>
+
+
+
+
+<div class="box">
+
+
+<h3>
+
+Trend Bulanan
+
+</h3>
+
+
+
+<canvas></canvas>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<section class="recent">
+
+
+
+<div class="box">
+
+
+<h3>
+
+Aktivitas Terakhir
+
+
+</h3>
+
+
+
+<table>
+
+
+<tr>
+
+
+<th>RC</th>
+
+<th>Status</th>
+
+<th>Tanggal</th>
+
+</tr>
+
+
+
+<tr>
+
+<td>RC-001</td>
+
+<td>Closed</td>
+
+<td>20/06/2026</td>
+
+</tr>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+
+function waktu(){
+
+
+let a=new Date();
+
+document.getElementById("jam").innerHTML=a.toLocaleString();
+
+
+}
+
+
+setInterval(waktu,1000);
+
+waktu();
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

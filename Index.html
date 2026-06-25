@@ -40,7 +40,222 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <i class="fa fa-home"></i>
 
 Dashboard
+<section class="wizard-container">
 
+<div class="wizard-header">
+
+<div class="step active">1</div>
+
+<div class="line"></div>
+
+<div class="step">2</div>
+
+<div class="line"></div>
+
+<div class="step">3</div>
+
+<div class="line"></div>
+
+<div class="step">4</div>
+
+</div>
+
+
+
+
+<form id="wizardForm">
+
+<div class="tab active">
+
+
+<h3>Pemeriksaan</h3>
+
+
+<input id="noRC" readonly>
+
+
+<input type="date" id="tanggal">
+
+
+<input placeholder="Petugas">
+
+
+<input placeholder="Wilayah">
+
+
+
+</div>
+
+
+
+
+
+<div class="tab">
+
+
+
+<h3>Data Sarana</h3>
+
+
+
+<select>
+
+
+<option>Lokomotif</option>
+
+<option>KRL</option>
+
+<option>Kereta Penumpang</option>
+
+
+</select>
+
+
+
+<input placeholder="No KA">
+
+
+<input placeholder="Dipo">
+
+
+
+</div>
+
+
+
+
+
+
+<div class="tab">
+
+
+<h3>Temuan</h3>
+
+
+
+
+<select>
+
+
+<option>Rem</option>
+
+<option>Bogie</option>
+
+<option>Kelistrikan</option>
+
+
+</select>
+
+
+
+<textarea placeholder="Deskripsi"></textarea>
+
+
+
+<input type="file"
+
+id="foto"
+
+accept="image/*">
+
+
+
+
+
+<img id="preview">
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="tab">
+
+
+
+<h3>Tindak Lanjut</h3>
+
+
+
+<select>
+
+
+<option>OPEN</option>
+
+<option>PROGRESS</option>
+
+<option>CLOSED</option>
+
+
+
+</select>
+
+
+
+
+<input type="date">
+
+
+
+<input placeholder="PIC">
+
+
+
+<textarea></textarea>
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+<div class="wizard-btn">
+
+
+<button onclick="prevStep()">
+
+Previous
+
+</button>
+
+
+
+<button onclick="nextStep()">
+
+Next
+
+</button>
+
+
+
+
+<button onclick="saveData()">
+
+Simpan
+
+</button>
+
+
+</div>
+
+
+</section>
 </li>
 
 
